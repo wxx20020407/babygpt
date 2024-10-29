@@ -86,6 +86,7 @@ torch.Size([1, 506])
 　　荷西被荷西找了过了
 ---------------
 ```
+
 ## issues solved
 
 1. The code specifies the use of a `float16` data representation to avoid reporting errors. This is because most microelectronics students' labs do not have cards superior to the V100 and therefore cannot support the bf16 data representation.
