@@ -27,4 +27,14 @@ First, use prepared.py to set up `itos` and `stoi`, and also generates `train.bi
 python data/chinese/prepare.py
 ```
 
-This creates a `train.bin` and `val.bin` in that data directory. Now it is time to train your GPT. The size of it very much depends on the computational resources of your system:
+Second, train the model. Parameters such as `n_layer`, `n_head`, `n_embd`, `max_iters` can be adjusted in config/train_chinese.py based on hardware performance.
+
+```sh
+python train.py config/train_chinese.py
+```
+
+Third, let the model output some examples. If the start parameter is not given, the code internally defaults to `\n` as a hint.
+
+```sh
+python sample.py --out_dir=out-chinese [--start=something]
+```
